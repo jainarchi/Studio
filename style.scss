@@ -19,7 +19,7 @@ body {
 main {
   width: 100%;
 
-  section#view1 {
+  section#view1{
     width: 100%;
     padding: 1rem;
     @include m.flex-col(1rem);
@@ -35,7 +35,7 @@ main {
     }
 
     .bottom {
-      background: #2e2d2d;
+      background: #272626;
       padding: 2rem;
       border-radius: 0.7rem;
       @include m.flex-col(3.5rem);
@@ -88,6 +88,55 @@ main {
     }
 
   }
+
+
+   section#view2 , section#view3{
+    width: 100%;
+    padding: 1rem;
+    @include m.flex-col(1rem);
+
+    .top {
+      border-radius: 0.7rem;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .bottom {
+      background: #272626;
+      padding: 2rem;
+      border-radius: 0.7rem;
+      @include m.flex-col(3.5rem);
+
+       h3{
+          font-weight: 400;
+        }
+
+      .text {
+       
+        h1 {
+          font-family: 2.4rem;
+          font-weight: 400;
+          font-size: 2rem;
+          text-transform : uppercase;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: rgb(164, 163, 163);
+          line-height: 1.5;
+          margin: 1.2rem 0;
+        }
+
+      }
+    }
+  }
+
+
+     
 }
 
 @media (min-width: 880px) {
@@ -122,10 +171,33 @@ main {
             font-weight: 600;
         }
           h1{
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
       }
        
+    }
+
+    section#view2 , section#view3{
+       flex-direction: row-reverse;
+      
+       .top , .bottom{
+        width: 50%;
+       }
+
+       .bottom{
+        justify-content: space-between;
+        padding: 4rem;
+
+        .text{
+          h1{
+            font-size: 3rem;
+          }
+        }
+       }
+    }
+
+    section#view3{
+      flex-direction: row;
     }
   }
 }

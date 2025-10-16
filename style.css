@@ -32,7 +32,7 @@ main section#view1 .top img {
   width: 100%;
 }
 main section#view1 .bottom {
-  background: #2e2d2d;
+  background: #272626;
   padding: 2rem;
   border-radius: 0.7rem;
   display: flex;
@@ -74,6 +74,44 @@ main #rating .box h1 {
   font-size: 2rem;
   font-weight: 400;
 }
+main section#view2, main section#view3 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#view2 .top, main section#view3 .top {
+  border-radius: 0.7rem;
+  overflow: hidden;
+  width: 100%;
+}
+main section#view2 .top img, main section#view3 .top img {
+  width: 100%;
+}
+main section#view2 .bottom, main section#view3 .bottom {
+  background: #272626;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+main section#view2 .bottom h3, main section#view3 .bottom h3 {
+  font-weight: 400;
+}
+main section#view2 .bottom .text h1, main section#view3 .bottom .text h1 {
+  font-family: 2.4rem;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main section#view2 .bottom .text p, main section#view3 .bottom .text p {
+  font-size: 1.1rem;
+  color: rgb(164, 163, 163);
+  line-height: 1.5;
+  margin: 1.2rem 0;
+}
 
 @media (min-width: 880px) {
   main section#view1 {
@@ -100,6 +138,22 @@ main #rating .box h1 {
     font-weight: 600;
   }
   main #rating .box h1 {
+    font-size: 3.5rem;
+  }
+  main section#view2, main section#view3 {
+    flex-direction: row-reverse;
+  }
+  main section#view2 .top, main section#view2 .bottom, main section#view3 .top, main section#view3 .bottom {
+    width: 50%;
+  }
+  main section#view2 .bottom, main section#view3 .bottom {
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  main section#view2 .bottom .text h1, main section#view3 .bottom .text h1 {
     font-size: 3rem;
+  }
+  main section#view3 {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
