@@ -58,6 +58,22 @@ main section#view1 .bottom .text button {
   background: #353535;
   color: whitesmoke;
 }
+main #rating {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+main #rating .box p {
+  color: rgb(128, 127, 127);
+  text-transform: uppercase;
+}
+main #rating .box h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
 
 @media (min-width: 880px) {
   main section#view1 {
@@ -76,5 +92,14 @@ main section#view1 .bottom .text button {
   }
   main section#view1 .bottom .text p {
     width: 80%;
+  }
+  main #rating {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main #rating .box p {
+    font-weight: 600;
+  }
+  main #rating .box h1 {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

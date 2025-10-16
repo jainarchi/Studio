@@ -66,6 +66,28 @@ main {
       }
     }
   }
+
+
+  #rating{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+
+    .box{
+        p{
+            color: rgb(128, 127, 127);
+            text-transform: uppercase;
+        }
+        h1{
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    }
+
+  }
 }
 
 @media (min-width: 880px) {
@@ -91,6 +113,19 @@ main {
           }
         }
       }
+    }
+
+    #rating{
+        grid-template-columns: repeat(4, 1fr);
+      .box{
+        p{
+            font-weight: 600;
+        }
+          h1{
+            font-size: 3rem;
+        }
+      }
+       
     }
   }
 }
