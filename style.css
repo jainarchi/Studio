@@ -16,6 +16,24 @@ body {
 main {
   width: 100%;
 }
+main #arrowbtn {
+  border: 0.01rem solid rgba(94, 93, 93, 0.826);
+  background: #343434;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+main i {
+  text-decoration: none;
+  color: whitesmoke;
+  border: 0.01rem solid rgba(171, 170, 170, 0.884);
+  border-radius: 50%;
+  padding: 0.6rem;
+  background: rgba(95, 94, 94, 0.774);
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+  margin-right: 0.5rem;
+}
 main section#view1 {
   width: 100%;
   padding: 1rem;
@@ -48,15 +66,6 @@ main section#view1 .bottom .text p {
   color: rgb(164, 163, 163);
   line-height: 1.5;
   margin: 1.5rem 0;
-}
-main section#view1 .bottom .text button {
-  border-radius: 50%;
-  padding: 0.5rem 0.6rem;
-  font-size: 1rem;
-  margin-right: 0.7rem;
-  border: 0.1rem solid rgba(128, 128, 128, 0.196);
-  background: #353535;
-  color: whitesmoke;
 }
 main #rating {
   display: grid;
@@ -159,18 +168,7 @@ main #teamView #teamCont .card .top {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 0.7rem;
   padding: 1rem;
-}
-main #teamView #teamCont .card .top a {
-  text-decoration: none;
-  color: whitesmoke;
-  border: 0.01rem solid rgba(171, 170, 170, 0.884);
-  border-radius: 50%;
-  padding: 0.5rem 0.6rem;
-  background: rgba(95, 94, 94, 0.774);
-  -webkit-backdrop-filter: blur(0.4rem);
-          backdrop-filter: blur(0.4rem);
 }
 main #teamView #teamCont .card .btm {
   display: flex;
@@ -197,13 +195,6 @@ main #teamView #teamCont #card2 {
 }
 main #teamView #teamCont #card3 {
   background-image: url("./assets/card3.webp");
-}
-main #arrowbtn {
-  border: 0.01rem solid rgba(94, 93, 93, 0.826);
-  background: #343434;
-  padding: 0.5rem;
-  border-radius: 50%;
-  margin-right: 0.5rem;
 }
 main #view5 {
   margin: 1rem;
@@ -238,7 +229,7 @@ main #view5 .bottom h2 {
 }
 main #view6 {
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 main #view6 #Cont {
   border-radius: 0.7rem;
@@ -262,6 +253,10 @@ main #view6 #Cont button {
   padding: 1rem;
   background: #000;
   color: whitesmoke;
+}
+main #view6 #Cont button i {
+  background: none;
+  border: none;
 }
 main footer {
   padding: 1rem;
@@ -287,7 +282,7 @@ main footer .bottom .btm-top {
   margin-bottom: 0.7rem;
 }
 main footer .bottom .btm-top div {
-  padding: 3rem;
+  padding: 2rem;
   background: rgb(36, 35, 35);
 }
 main footer .bottom .btm-top div h3 {
@@ -313,10 +308,14 @@ main footer .btm {
   background: rgb(36, 35, 35);
   color: rgb(152, 147, 147);
   padding: 1.5rem;
+  text-align: center;
 }
 main footer .btm a {
   color: whitesmoke;
   line-height: 1.6;
+}
+main footer .btm #totop {
+  display: none;
 }
 
 @media (min-width: 880px) {
@@ -383,7 +382,8 @@ main footer .btm a {
   main #view5 {
     flex-direction: row;
   }
-  main #view5 .top, main #view5 .bottom {
+  main #view5 .top,
+  main #view5 .bottom {
     width: 50%;
   }
   main #view5 .bottom {
@@ -413,14 +413,21 @@ main footer .btm a {
   }
   main footer .top {
     justify-content: space-between;
+    padding: 3rem;
   }
   main footer .bottom .btm-top {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  main footer .bottom .btm-top div {
+    padding: 3rem;
   }
   main footer .bottom .btm {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: whitesmoke;
+  }
+  main footer .bottom .btm #totop {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

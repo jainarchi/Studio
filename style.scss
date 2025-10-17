@@ -19,6 +19,25 @@ body {
 main {
   width: 100%;
 
+  #arrowbtn {
+    border: 0.01rem solid rgba(94, 93, 93, 0.826);
+    background: #343434;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  i {
+    text-decoration: none;
+    color: whitesmoke;
+    border: 0.01rem solid rgba(171, 170, 170, 0.884);
+    border-radius: 50%;
+    padding: 0.6rem;
+    background: rgba(95, 94, 94, 0.774);
+    backdrop-filter: blur(0.4rem);
+    margin-right: 0.5rem;
+  }
+
   section#view1 {
     width: 100%;
     padding: 1rem;
@@ -51,16 +70,6 @@ main {
           color: rgb(164, 163, 163);
           line-height: 1.5;
           margin: 1.5rem 0;
-        }
-
-        button {
-          border-radius: 50%;
-          padding: 0.5rem 0.6rem;
-          font-size: 1rem;
-          margin-right: 0.7rem;
-          border: 0.1rem solid rgba(128, 128, 128, 0.196);
-          background: #353535;
-          color: whitesmoke;
         }
       }
     }
@@ -145,7 +154,7 @@ main {
         display: none;
       }
     }
-    
+
     #teamCont {
       width: 100%;
       display: grid;
@@ -166,18 +175,7 @@ main {
 
         .top {
           @include m.flex-row(end);
-          gap: 0.7rem;
           padding: 1rem;
-
-          a {
-            text-decoration: none;
-            color: whitesmoke;
-            border: 0.01rem solid rgba(171, 170, 170, 0.884);
-            border-radius: 50%;
-            padding: 0.5rem 0.6rem;
-            background: rgba(95, 94, 94, 0.774);
-            backdrop-filter: blur(0.4rem);
-          }
         }
 
         .btm {
@@ -208,16 +206,6 @@ main {
       }
     }
   }
-
-  
-  #arrowbtn {
-      border: 0.01rem solid rgba(94, 93, 93, 0.826);
-      background: #343434;
-      padding: 0.5rem;
-      border-radius: 50%;
-      margin-right: 0.5rem;
-  }
-
 
   #view5 {
     margin: 1rem;
@@ -250,57 +238,57 @@ main {
     }
   }
 
-
-  #view6{
+  #view6 {
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
 
-    #Cont{
-    border-radius: 0.7rem;
-    background: #cebd63;
-    padding: 1.5rem;
-    @include m.flex-col(2rem);
-    color: #1a1a1a;
-
-    h4{
-     font-weight: 400;
-    }
-
-     h1{
-      font-size: 2.8rem ;
-      font-weight: 400;
-      line-height: 1.2;
-      
-    }
-
-    button{
+    #Cont {
       border-radius: 0.7rem;
-      padding: 1rem;
-      background: #000;
-      color: whitesmoke;
-      
+      background: #cebd63;
+      padding: 1.5rem;
+      @include m.flex-col(2rem);
+      color: #1a1a1a;
 
-    }
+      h4 {
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      button {
+        border-radius: 0.7rem;
+        padding: 1rem;
+        background: #000;
+        color: whitesmoke;
+
+        i {
+          background: none;
+          border: none;
+        }
+      }
     }
   }
-  
-  footer{
+
+  footer {
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.7rem;
 
-
-    .top{
+    .top {
       padding: 2rem;
       @include m.flex-col(3rem);
       background: rgb(36, 35, 35);
       border-radius: 0.7rem;
     }
 
-    .bottom{
-       .btm-top{
+    .bottom {
+      .btm-top {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -308,54 +296,52 @@ main {
         overflow: hidden;
         margin-bottom: 0.7rem;
 
-        div{
-          padding: 3rem;
+        div {
+          padding: 2rem;
           background: rgb(36, 35, 35);
 
-          h3{
+          h3 {
             font-weight: 400;
           }
 
-          li{
+          li {
             margin: 1.2rem 0;
             list-style: none;
-            
-            a{
+
+            a {
               text-decoration: none;
               color: rgb(152, 147, 147);
               font-weight: 600;
             }
           }
 
-          button{
+          button {
             border-radius: 0.7rem;
             padding: 1rem;
             background: #cebd63;
             border: none;
           }
         }
-       }
+      }
     }
-    
-    .btm{
+
+    .btm {
       border-radius: 0.7rem;
       background: rgb(36, 35, 35);
       color: rgb(152, 147, 147);
       padding: 1.5rem;
-      
+      text-align: center;
 
-      a{
+      a {
         color: whitesmoke;
         line-height: 1.6;
       }
-
-
+      #totop {
+        display: none;
+      }
     }
-
-
   }
 }
-
 
 @media (min-width: 880px) {
   main {
@@ -440,65 +426,64 @@ main {
     #view5 {
       flex-direction: row;
 
-      .top, .bottom {
+      .top,
+      .bottom {
         width: 50%;
       }
 
       .bottom {
         padding: 4rem;
         justify-content: space-between;
-        
-       
+
         h2 {
           font-size: 3rem;
           width: 80%;
         }
       }
     }
-   
 
-    #view6{
-     
-
-      #Cont{
+    #view6 {
+      #Cont {
         flex-direction: row;
         justify-content: space-between;
-        padding: 4rem ;
-      
-      h1{
-        font-size: 4.5rem;
-      }
+        padding: 4rem;
 
-      button{
-       height: max-content;
-       width: 22%;
-       align-self: end;
-      }
+        h1 {
+          font-size: 4.5rem;
+        }
 
+        button {
+          height: max-content;
+          width: 22%;
+          align-self: end;
+        }
       }
-    
     }
 
+    footer {
+      grid-template-columns: 1fr 3fr;
 
-    footer{
-       grid-template-columns: 1fr 3fr;
-
-       .top{
+      .top {
         justify-content: space-between;
-       }
-       .bottom {
-        .btm-top{
-        grid-template-columns: 1fr 1fr 1fr;
-       }
+        padding: 3rem;
+      }
+      .bottom {
+        .btm-top {
+          grid-template-columns: 1fr 1fr 1fr;
 
-       .btm{
-        @include m.flex-row(space-between);
-        color: whitesmoke;
-       }
-      
-      
+          div {
+            padding: 3rem;
+          }
+        }
+        .btm {
+          @include m.flex-row(space-between);
+          color: whitesmoke;
+
+          #totop {
+            display: block;
+          }
+        }
       }
     }
-
   }
 }
