@@ -16,6 +16,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
 main {
   width: 100%;
 
@@ -136,6 +137,103 @@ main {
   }
 
 
+    #teamView{
+      width: 100%;
+        #head{
+          padding: 1rem 1.5rem;
+          @include m.flex-row(space-between);
+
+          h1{
+            font-size: 1.8rem;
+            font-weight: 400;
+          }
+
+          div{
+            display: none;
+              i{
+                border: 0.01rem solid rgba(94, 93, 93, 0.826);
+                background: #2d2d2d;
+                padding: 0.5rem;
+                border-radius: 50% ;
+                margin-right: 0.5rem;
+              }
+          }
+        }
+      
+       
+      #teamCont{
+         width: 100%;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+         gap: 1rem;
+         padding: 1rem;
+         
+        .card{
+           width: 100%;
+           border-radius: 0.7rem;
+           @include m.flex-col(0rem);
+           justify-content: space-between;
+           background-position: center;
+           background-size: cover;
+           aspect-ratio: 1/1;
+           padding: 1rem;
+           
+           .top{
+            @include m.flex-row(end);
+            gap: 0.7rem;
+            padding: 1rem;
+            
+
+            a{
+              text-decoration: none;
+               color: whitesmoke;
+               border: 0.01rem solid rgba(171, 170, 170, 0.884);
+               border-radius: 50%;
+               padding: 0.5rem 0.6rem;
+               background: rgba(95, 94, 94, 0.774);
+               backdrop-filter: blur(0.4rem);
+            }
+           }
+
+           .btm{
+            @include m.flex-row(space-between);
+            padding: 1rem;
+            background: rgba(95, 94, 94, 0.774);
+            backdrop-filter: blur(0.4rem);
+            border: 0.001rem solid rgb(81, 80, 80);
+            border-radius: 0.7rem ;
+           
+            h1{
+              font-weight: 100;
+            }
+            h4{
+              font-weight: 400;
+            }
+           }
+           
+        }
+
+        #card1{
+          background-image: url("./img4.webp");
+        }
+        #card2{
+          background-image: url("./card2.webp");
+        }
+         #card3{
+          background-image: url("./card3.webp");
+        }
+      }
+      
+
+
+    }
+
+
+
+
+
+
      
 }
 
@@ -199,5 +297,30 @@ main {
     section#view3{
       flex-direction: row;
     }
+
+
+    #teamView {
+     #head{
+        padding: 1rem 3rem;
+
+        h1{
+        font-size: 3rem;
+       }
+
+       div{
+        display: block;
+       }
+     }  
+     
+      #teamCont{
+       grid-template-columns: 1fr 1fr 1fr;
+      }
+     }
+
+
+
+
+
+
   }
 }

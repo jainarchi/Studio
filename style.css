@@ -112,6 +112,92 @@ main section#view2 .bottom .text p, main section#view3 .bottom .text p {
   line-height: 1.5;
   margin: 1.2rem 0;
 }
+main #teamView {
+  width: 100%;
+}
+main #teamView #head {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #teamView #head h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+main #teamView #head div {
+  display: none;
+}
+main #teamView #head div i {
+  border: 0.01rem solid rgba(94, 93, 93, 0.826);
+  background: #2d2d2d;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+main #teamView #teamCont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+main #teamView #teamCont .card {
+  width: 100%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: space-between;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+}
+main #teamView #teamCont .card .top {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+main #teamView #teamCont .card .top a {
+  text-decoration: none;
+  color: whitesmoke;
+  border: 0.01rem solid rgba(171, 170, 170, 0.884);
+  border-radius: 50%;
+  padding: 0.5rem 0.6rem;
+  background: rgba(95, 94, 94, 0.774);
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+}
+main #teamView #teamCont .card .btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(95, 94, 94, 0.774);
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+  border: 0.001rem solid rgb(81, 80, 80);
+  border-radius: 0.7rem;
+}
+main #teamView #teamCont .card .btm h1 {
+  font-weight: 100;
+}
+main #teamView #teamCont .card .btm h4 {
+  font-weight: 400;
+}
+main #teamView #teamCont #card1 {
+  background-image: url("./img4.webp");
+}
+main #teamView #teamCont #card2 {
+  background-image: url("./card2.webp");
+}
+main #teamView #teamCont #card3 {
+  background-image: url("./card3.webp");
+}
 
 @media (min-width: 880px) {
   main section#view1 {
@@ -155,5 +241,17 @@ main section#view2 .bottom .text p, main section#view3 .bottom .text p {
   }
   main section#view3 {
     flex-direction: row;
+  }
+  main #teamView #head {
+    padding: 1rem 3rem;
+  }
+  main #teamView #head h1 {
+    font-size: 3rem;
+  }
+  main #teamView #head div {
+    display: block;
+  }
+  main #teamView #teamCont {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
