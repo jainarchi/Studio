@@ -16,11 +16,10 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-
 main {
   width: 100%;
 
-  section#view1{
+  section#view1 {
     width: 100%;
     padding: 1rem;
     @include m.flex-col(1rem);
@@ -62,14 +61,12 @@ main {
           border: 0.1rem solid rgba(128, 128, 128, 0.196);
           background: #353535;
           color: whitesmoke;
-          
         }
       }
     }
   }
 
-
-  #rating{
+  #rating {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -77,21 +74,20 @@ main {
     gap: 1.5rem;
     padding: 2rem;
 
-    .box{
-        p{
-            color: rgb(128, 127, 127);
-            text-transform: uppercase;
-        }
-        h1{
-            font-size: 2rem;
-            font-weight: 400;
-        }
+    .box {
+      p {
+        color: rgb(128, 127, 127);
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
     }
-
   }
 
-
-   section#view2 , section#view3{
+  section#view2,
+  section#view3 {
     width: 100%;
     padding: 1rem;
     @include m.flex-col(1rem);
@@ -112,17 +108,16 @@ main {
       border-radius: 0.7rem;
       @include m.flex-col(3.5rem);
 
-       h3{
-          font-weight: 400;
-        }
+      h3 {
+        font-weight: 400;
+      }
 
       .text {
-       
         h1 {
           font-family: 2.4rem;
           font-weight: 400;
           font-size: 2rem;
-          text-transform : uppercase;
+          text-transform: uppercase;
         }
 
         p {
@@ -131,111 +126,174 @@ main {
           line-height: 1.5;
           margin: 1.2rem 0;
         }
+      }
+    }
+  }
 
+  #teamView {
+    width: 100%;
+    #head {
+      padding: 1rem 1.5rem;
+      @include m.flex-row(space-between);
+
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      div {
+        display: none;
+      }
+    }
+    
+    #teamCont {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+      padding: 1rem;
+
+      .card {
+        width: 100%;
+        border-radius: 0.7rem;
+        @include m.flex-col(0rem);
+        justify-content: space-between;
+        background-position: center;
+        background-size: cover;
+        aspect-ratio: 1/1;
+        padding: 1rem;
+
+        .top {
+          @include m.flex-row(end);
+          gap: 0.7rem;
+          padding: 1rem;
+
+          a {
+            text-decoration: none;
+            color: whitesmoke;
+            border: 0.01rem solid rgba(171, 170, 170, 0.884);
+            border-radius: 50%;
+            padding: 0.5rem 0.6rem;
+            background: rgba(95, 94, 94, 0.774);
+            backdrop-filter: blur(0.4rem);
+          }
+        }
+
+        .btm {
+          @include m.flex-row(space-between);
+          padding: 1rem;
+          background: rgba(95, 94, 94, 0.774);
+          backdrop-filter: blur(0.4rem);
+          border: 0.001rem solid rgb(81, 80, 80);
+          border-radius: 0.7rem;
+
+          h1 {
+            font-weight: 100;
+          }
+          h4 {
+            font-weight: 400;
+          }
+        }
+      }
+
+      #card1 {
+        background-image: url("./assets/card1.webp");
+      }
+      #card2 {
+        background-image: url("./assets/card2.webp");
+      }
+      #card3 {
+        background-image: url("./assets/card3.webp");
+      }
+    }
+  }
+
+  
+  #arrowbtn {
+      border: 0.01rem solid rgba(94, 93, 93, 0.826);
+      background: #343434;
+      padding: 0.5rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+  }
+
+
+  #view5 {
+    margin: 1rem;
+    @include m.flex-col(0.5rem);
+    .top {
+      width: 100%;
+      border-radius: 0.7rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .bottom {
+      border-radius: 0.7rem;
+      @include m.flex-col(3rem);
+      padding: 2rem;
+      background: #282828;
+      text-transform: uppercase;
+
+      p {
+        color: rgb(172, 164, 164);
+        margin-bottom: 0.8rem;
+        font-weight: 400;
+      }
+      h2 {
+        font-weight: 400;
       }
     }
   }
 
 
-    #teamView{
-      width: 100%;
-        #head{
-          padding: 1rem 1.5rem;
-          @include m.flex-row(space-between);
+  #view6{
+    width: 100%;
+    padding: 1rem;
 
-          h1{
-            font-size: 1.8rem;
-            font-weight: 400;
-          }
+    #Cont{
+    border-radius: 0.7rem;
+    background: #cebd63;
+    padding: 1.5rem;
+    @include m.flex-col(2rem);
+    color: #1a1a1a;
 
-          div{
-            display: none;
-              i{
-                border: 0.01rem solid rgba(94, 93, 93, 0.826);
-                background: #2d2d2d;
-                padding: 0.5rem;
-                border-radius: 50% ;
-                margin-right: 0.5rem;
-              }
-          }
-        }
-      
-       
-      #teamCont{
-         width: 100%;
-         display: grid;
-         grid-template-columns: 1fr;
-         grid-template-rows: auto;
-         gap: 1rem;
-         padding: 1rem;
-         
-        .card{
-           width: 100%;
-           border-radius: 0.7rem;
-           @include m.flex-col(0rem);
-           justify-content: space-between;
-           background-position: center;
-           background-size: cover;
-           aspect-ratio: 1/1;
-           padding: 1rem;
-           
-           .top{
-            @include m.flex-row(end);
-            gap: 0.7rem;
-            padding: 1rem;
-            
-
-            a{
-              text-decoration: none;
-               color: whitesmoke;
-               border: 0.01rem solid rgba(171, 170, 170, 0.884);
-               border-radius: 50%;
-               padding: 0.5rem 0.6rem;
-               background: rgba(95, 94, 94, 0.774);
-               backdrop-filter: blur(0.4rem);
-            }
-           }
-
-           .btm{
-            @include m.flex-row(space-between);
-            padding: 1rem;
-            background: rgba(95, 94, 94, 0.774);
-            backdrop-filter: blur(0.4rem);
-            border: 0.001rem solid rgb(81, 80, 80);
-            border-radius: 0.7rem ;
-           
-            h1{
-              font-weight: 100;
-            }
-            h4{
-              font-weight: 400;
-            }
-           }
-           
-        }
-
-        #card1{
-          background-image: url("./img4.webp");
-        }
-        #card2{
-          background-image: url("./card2.webp");
-        }
-         #card3{
-          background-image: url("./card3.webp");
-        }
-      }
-      
-
-
+    h4{
+     font-weight: 400;
     }
 
+     h1{
+      font-size: 2.8rem ;
+      font-weight: 400;
+      line-height: 1.2;
+      
+    }
+
+    button{
+      border-radius: 0.7rem;
+      padding: 1rem;
+      background: #000;
+      color: whitesmoke;
+      
+
+    }
+    }
+  }
 
 
 
 
 
-     
 }
+
+
+
+
+
 
 @media (min-width: 880px) {
   main {
@@ -262,64 +320,102 @@ main {
       }
     }
 
-    #rating{
-        grid-template-columns: repeat(4, 1fr);
-      .box{
-        p{
-            font-weight: 600;
+    #rating {
+      grid-template-columns: repeat(4, 1fr);
+      .box {
+        p {
+          font-weight: 600;
         }
-          h1{
-            font-size: 3.5rem;
+        h1 {
+          font-size: 3.5rem;
         }
       }
-       
     }
 
-    section#view2 , section#view3{
-       flex-direction: row-reverse;
-      
-       .top , .bottom{
-        width: 50%;
-       }
+    section#view2,
+    section#view3 {
+      flex-direction: row-reverse;
 
-       .bottom{
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
         justify-content: space-between;
         padding: 4rem;
 
-        .text{
-          h1{
+        .text {
+          h1 {
             font-size: 3rem;
           }
         }
-       }
+      }
     }
 
-    section#view3{
+    section#view3 {
       flex-direction: row;
     }
 
-
     #teamView {
-     #head{
+      #head {
         padding: 1rem 3rem;
 
-        h1{
-        font-size: 3rem;
-       }
+        h1 {
+          font-size: 3rem;
+        }
 
-       div{
-        display: block;
-       }
-     }  
-     
-      #teamCont{
-       grid-template-columns: 1fr 1fr 1fr;
+        div {
+          display: block;
+        }
       }
-     }
 
+      #teamCont {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
 
+    #view5 {
+      flex-direction: row;
 
+      .top, .bottom {
+        width: 50%;
+      }
 
+      .bottom {
+        padding: 4rem;
+        justify-content: space-between;
+       
+        h2 {
+          font-size: 3rem;
+          width: 80%;
+        }
+      }
+    }
+   
+
+    #view6{
+     
+
+      #Cont{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem ;
+      
+      h1{
+        font-size: 4.5rem;
+      }
+
+      button{
+       height: max-content;
+       width: 22%;
+       align-self: end;
+      }
+
+      
+      }
+    
+    }
 
 
   }
