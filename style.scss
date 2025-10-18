@@ -1,4 +1,4 @@
-@use "_mixin" as m; // import and use as m
+@use "_mixin" as m;
 
 * {
   padding: 0;
@@ -12,12 +12,19 @@ body {
   width: 100%;
   background: #000;
   color: whitesmoke;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+section,
+footer,
+#rating {
+  max-width: 1950px;
 }
 
 main {
   width: 100%;
+  align-items: center;
 
   #arrowbtn {
     border: 0.01rem solid rgba(94, 93, 93, 0.826);
@@ -28,14 +35,21 @@ main {
   }
 
   i {
+    display: inline-block;
     text-decoration: none;
     color: whitesmoke;
-    border: 0.01rem solid rgba(171, 170, 170, 0.884);
+    border: 0.01rem solid rgba(145, 144, 144, 0.475);
     border-radius: 50%;
     padding: 0.6rem;
     background: rgba(95, 94, 94, 0.774);
     backdrop-filter: blur(0.4rem);
-    margin-right: 0.5rem;
+    margin: 0.3rem;
+    transition: transform 0.3s ease-in-out, border 0.3s;
+  }
+
+  i:hover {
+    border: 0.01rem solid rgba(181, 180, 180, 0.884);
+    scale: 1.1;
   }
 
   section#view1 {
@@ -98,7 +112,7 @@ main {
   section#view2,
   section#view3 {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     @include m.flex-col(1rem);
 
     .top {
@@ -141,8 +155,9 @@ main {
 
   #teamView {
     width: 100%;
+
     #head {
-      padding: 1rem 1.5rem;
+      padding: 0rem 1.5rem;
       @include m.flex-row(space-between);
 
       h1 {
@@ -193,6 +208,9 @@ main {
             font-weight: 400;
           }
         }
+        .btm:hover {
+          border-color: rgb(149, 148, 148);
+        }
       }
 
       #card1 {
@@ -208,7 +226,7 @@ main {
   }
 
   #view5 {
-    margin: 1rem;
+    padding: 1rem;
     @include m.flex-col(0.5rem);
     .top {
       width: 100%;
@@ -232,8 +250,9 @@ main {
         margin-bottom: 0.8rem;
         font-weight: 400;
       }
-      h2 {
+      h1 {
         font-weight: 400;
+        font-size: 3rem;
       }
     }
   }
@@ -245,7 +264,7 @@ main {
     #Cont {
       border-radius: 0.7rem;
       background: #cebd63;
-      padding: 1.5rem;
+      padding: 3rem;
       @include m.flex-col(2rem);
       color: #1a1a1a;
 
@@ -254,14 +273,14 @@ main {
       }
 
       h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
         font-weight: 400;
         line-height: 1.2;
       }
 
       button {
         border-radius: 0.7rem;
-        padding: 1rem;
+        padding: 0.2rem 0.8rem;
         background: #000;
         color: whitesmoke;
 
@@ -269,6 +288,10 @@ main {
           background: none;
           border: none;
         }
+      }
+
+      button:hover {
+        box-shadow: 0 0 0.8rem white;
       }
     }
   }
@@ -282,7 +305,7 @@ main {
 
     .top {
       padding: 2rem;
-      @include m.flex-col(3rem);
+      @include m.flex-col(6rem);
       background: rgb(36, 35, 35);
       border-radius: 0.7rem;
     }
@@ -295,11 +318,11 @@ main {
         border-radius: 0.7rem;
         overflow: hidden;
         margin-bottom: 0.7rem;
+        background: rgb(36, 35, 35);
 
         div {
           padding: 2rem;
-          background: rgb(36, 35, 35);
-
+         
           h3 {
             font-weight: 400;
           }
@@ -321,27 +344,71 @@ main {
             background: #cebd63;
             border: none;
           }
+
+          button:hover {
+            background: #dac559;
+          }
         }
       }
-    }
-
-    .btm {
+      
+     .btm {
       border-radius: 0.7rem;
       background: rgb(36, 35, 35);
       color: rgb(152, 147, 147);
       padding: 1.5rem;
+      @include m.flex-col(1rem);
       text-align: center;
 
-      a {
+       a {
         color: whitesmoke;
         line-height: 1.6;
-      }
-      #totop {
-        display: none;
+       }
+      
+     }
+    }
+
+  }
+}
+
+@media (min-width : 479px) {
+  main{
+    footer{
+      .bottom{
+        .btm-top{
+          grid-template-columns: 1fr 1fr;
+        }
       }
     }
   }
 }
+
+
+@media (min-width: 767px) {
+  main {
+    #teamView {
+      #teamCont {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    footer {
+      .bottom {
+        .btm-top {
+          grid-template-columns: 1fr 1fr 1fr;
+          div {
+            padding: 3rem;
+          }
+        }
+        .btm{
+          @include m.flex-row(space-between);
+         
+        }
+      }
+
+    }
+  }
+}
+
 
 @media (min-width: 880px) {
   main {
@@ -442,24 +509,6 @@ main {
       }
     }
 
-    #view6 {
-      #Cont {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 4rem;
-
-        h1 {
-          font-size: 4.5rem;
-        }
-
-        button {
-          height: max-content;
-          width: 22%;
-          align-self: end;
-        }
-      }
-    }
-
     footer {
       grid-template-columns: 1fr 3fr;
 
@@ -467,23 +516,34 @@ main {
         justify-content: space-between;
         padding: 3rem;
       }
-      .bottom {
-        .btm-top {
-          grid-template-columns: 1fr 1fr 1fr;
-
-          div {
-            padding: 3rem;
-          }
-        }
-        .btm {
-          @include m.flex-row(space-between);
-          color: whitesmoke;
-
-          #totop {
-            display: block;
-          }
-        }
-      }
     }
   }
 }
+
+
+@media (min-width: 990px ) {
+   main{
+     #view6{
+      #Cont{
+        @include m.flex-row(space-between);
+        gap: 0;
+       
+        #leftText{
+         max-width: 72%;
+        }
+        h1{
+          font-size: 4rem;
+        }
+      
+        button {
+          height: max-content;
+          align-self: end;
+
+        }
+      }
+     }
+   }
+}
+
+
+        
