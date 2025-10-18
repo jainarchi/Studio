@@ -48,6 +48,38 @@ main img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem 0.2rem 2rem;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 1rem;
+}
+main nav h3 {
+  font-weight: 300;
+}
+main nav #right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+main nav #right a {
+  text-decoration: none;
+  color: rgb(210, 206, 206);
+  background: #1e1d1d;
+  border-radius: 0.5rem;
+  padding: 1rem 1.3rem;
+  margin-left: 0.7rem;
+}
+main nav #right #lastbtn {
+  background: #cebd63;
+  color: #434343;
+}
 main section#view1 {
   width: 100%;
   padding: 1rem;
