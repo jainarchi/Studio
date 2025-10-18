@@ -13,10 +13,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h1 {
-  font-size: clamp(2rem, 5vw + 0.5rem, 4rem);
-}
-
 main {
   max-width: 1950px;
   width: 100%;
@@ -46,6 +42,12 @@ main i:hover {
   border: 0.01rem solid rgba(181, 180, 180, 0.884);
   scale: 1.1;
 }
+main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 main section#view1 {
   width: 100%;
   padding: 1rem;
@@ -58,9 +60,6 @@ main section#view1 .top {
   overflow: hidden;
   width: 100%;
 }
-main section#view1 .top img {
-  width: 100%;
-}
 main section#view1 .bottom {
   background: #272626;
   padding: 2rem;
@@ -70,7 +69,7 @@ main section#view1 .bottom {
   gap: 3.5rem;
 }
 main section#view1 .bottom .text h1 {
-  font-family: 2.4rem;
+  font-size: 2.4rem;
   font-weight: 400;
 }
 main section#view1 .bottom .text p {
@@ -109,10 +108,6 @@ main section#view3 .top {
   overflow: hidden;
   width: 100%;
 }
-main section#view2 .top img,
-main section#view3 .top img {
-  width: 100%;
-}
 main section#view2 .bottom,
 main section#view3 .bottom {
   background: #272626;
@@ -128,7 +123,6 @@ main section#view3 .bottom h3 {
 }
 main section#view2 .bottom .text h1,
 main section#view3 .bottom .text h1 {
-  font-family: 2.4rem;
   font-weight: 400;
   font-size: 2rem;
   text-transform: uppercase;
@@ -144,7 +138,7 @@ main #teamView {
   width: 100%;
 }
 main #teamView #head {
-  padding: 0rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -197,8 +191,8 @@ main #teamView #teamCont .card .btm {
   border: 0.001rem solid rgb(81, 80, 80);
   border-radius: 0.7rem;
 }
-main #teamView #teamCont .card .btm h2 {
-  font-weight: 100;
+main #teamView #teamCont .card .btm h3 {
+  font-weight: 400;
 }
 main #teamView #teamCont .card .btm h4 {
   font-weight: 400;
@@ -226,9 +220,6 @@ main #view5 .top {
   border-radius: 0.7rem;
   overflow: hidden;
 }
-main #view5 .top img {
-  width: 100%;
-}
 main #view5 .bottom {
   border-radius: 0.7rem;
   display: flex;
@@ -243,9 +234,9 @@ main #view5 .bottom p {
   margin-bottom: 0.8rem;
   font-weight: 400;
 }
-main #view5 .bottom h1 {
+main #view5 .bottom h2 {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 main #view6 {
   width: 100%;
@@ -254,7 +245,7 @@ main #view6 {
 main #view6 #Cont {
   border-radius: 0.7rem;
   background: #cebd63;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -293,7 +284,7 @@ main footer .top {
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  background: rgb(36, 35, 35);
+  background: rgb(28, 28, 28);
   border-radius: 0.7rem;
 }
 main footer .bottom .btm-top {
@@ -303,7 +294,7 @@ main footer .bottom .btm-top {
   border-radius: 0.7rem;
   overflow: hidden;
   margin-bottom: 0.7rem;
-  background: rgb(36, 35, 35);
+  background: rgb(28, 28, 28);
 }
 main footer .bottom .btm-top div {
   padding: 2rem;
@@ -343,6 +334,9 @@ main footer .bottom .btm a {
   color: whitesmoke;
   line-height: 1.6;
 }
+main footer .bottom .btm div {
+  color: whitesmoke;
+}
 
 @media (min-width: 479px) {
   main footer .bottom .btm-top {
@@ -350,6 +344,9 @@ main footer .bottom .btm a {
   }
 }
 @media (min-width: 767px) {
+  main #teamView #head h1 {
+    font-size: 2.8rem;
+  }
   main #teamView #teamCont {
     grid-template-columns: 1fr 1fr;
   }
@@ -376,10 +373,7 @@ main footer .bottom .btm a {
   }
   main section#view1 .bottom {
     justify-content: space-between;
-    padding: 4rem;
-  }
-  main section#view1 .bottom .text h1 {
-    font-size: 3.8rem;
+    padding: 3rem;
   }
   main section#view1 .bottom .text p {
     width: 80%;
@@ -389,9 +383,6 @@ main footer .bottom .btm a {
   }
   main #rating .box p {
     font-weight: 600;
-  }
-  main #rating .box h1 {
-    font-size: 3.5rem;
   }
   main section#view2,
   main section#view3 {
@@ -406,20 +397,32 @@ main footer .bottom .btm a {
   main section#view2 .bottom,
   main section#view3 .bottom {
     justify-content: space-between;
+    padding: 3rem;
+  }
+  main section#view3 {
+    flex-direction: row;
+  }
+  main #view5 .bottom h2 {
+    max-width: 70%;
+  }
+}
+@media (min-width: 990px) {
+  main section#view1 .bottom {
+    padding: 4rem;
+  }
+  main section#view1 .bottom .text h1 {
+    font-size: 3.8rem;
+  }
+  main section#view2 .bottom,
+  main section#view3 .bottom {
     padding: 4rem;
   }
   main section#view2 .bottom .text h1,
   main section#view3 .bottom .text h1 {
     font-size: 3rem;
   }
-  main section#view3 {
-    flex-direction: row;
-  }
   main #teamView #head {
     padding: 1rem 3rem;
-  }
-  main #teamView #head h1 {
-    font-size: 3rem;
   }
   main #teamView #head div {
     display: block;
@@ -439,24 +442,15 @@ main footer .bottom .btm a {
     justify-content: space-between;
   }
   main #view5 .bottom h2 {
-    font-size: 3rem;
-    width: 80%;
+    max-width: 80%;
   }
-  main footer {
-    grid-template-columns: 1fr 3fr;
-  }
-  main footer .top {
-    justify-content: space-between;
-    padding: 3rem;
-  }
-}
-@media (min-width: 990px) {
   main #view6 #Cont {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0;
+    padding: 3rem;
   }
   main #view6 #Cont #leftText {
     max-width: 72%;
@@ -468,5 +462,12 @@ main footer .bottom .btm a {
     height: -moz-max-content;
     height: max-content;
     align-self: end;
+  }
+  main footer {
+    grid-template-columns: 1fr 3fr;
+  }
+  main footer .top {
+    justify-content: space-between;
+    padding: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
