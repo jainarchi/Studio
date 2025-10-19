@@ -18,12 +18,42 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-main #arrowbtn {
-  border: 0.01rem solid rgba(94, 93, 93, 0.826);
-  background: #343434;
-  padding: 0.5rem;
+main .findjobArrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.7rem;
+}
+main .findjobArrow .circle {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid rgb(87, 86, 86);
+  background: rgba(32, 32, 32, 0.774);
   border-radius: 50%;
-  margin-right: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+main .findjobArrow .circle #a1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .findjobArrow .circle #a2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%, 100%);
+}
+main .findjobArrow:hover #a1 {
+  transform: translate(100%, -200%);
+  transition: 0.2s ease-in-out;
+}
+main .findjobArrow:hover #a2 {
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease-in;
 }
 main i {
   display: inline-block;
@@ -36,11 +66,11 @@ main i {
   -webkit-backdrop-filter: blur(0.4rem);
           backdrop-filter: blur(0.4rem);
   margin: 0.3rem;
-  transition: transform 0.3s ease-in-out, border 0.3s;
+  transition: transform 0.3s ease-in, border 0.3s;
 }
 main i:hover {
   border: 0.01rem solid rgba(181, 180, 180, 0.884);
-  scale: 1.1;
+  scale: 1.2;
 }
 main img {
   width: 100%;
@@ -58,27 +88,44 @@ main nav {
   font-family: monospace;
   font-size: 1rem;
 }
-main nav h3 {
-  font-weight: 300;
+main nav h2 {
+  font-weight: 200;
+  color: rgb(210, 206, 206);
 }
 main nav #right {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.2rem;
 }
 main nav #right a {
   text-decoration: none;
   color: rgb(210, 206, 206);
-  background: #1e1d1d;
+  background: #1d1c1c;
   border-radius: 0.5rem;
   padding: 1rem 1.3rem;
-  margin-left: 0.7rem;
+  margin-left: 0.1rem;
+}
+main nav #right #rig-first {
+  display: none;
+}
+main nav #right #zero {
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  background: #cebd63;
+  color: #434343;
 }
 main nav #right #lastbtn {
   background: #cebd63;
   color: #434343;
+  display: none;
+}
+main nav #right #lastbtn:hover {
+  background: #e3cb54;
+}
+main nav #right #hamburger {
+  display: block;
 }
 main section#view1 {
   width: 100%;
@@ -180,7 +227,7 @@ main #teamView #head h1 {
   font-size: 1.8rem;
   font-weight: 400;
 }
-main #teamView #head div {
+main #teamView #head .findjobArrow {
   display: none;
 }
 main #teamView #teamCont {
@@ -376,6 +423,9 @@ main footer .bottom .btm div {
   }
 }
 @media (min-width: 767px) {
+  main nav #right #lastbtn {
+    display: block;
+  }
   main #teamView #head h1 {
     font-size: 2.8rem;
   }
@@ -439,6 +489,12 @@ main footer .bottom .btm div {
   }
 }
 @media (min-width: 990px) {
+  main nav #right #rig-first {
+    display: block;
+  }
+  main nav #right #hamburger {
+    display: none;
+  }
   main section#view1 .bottom {
     padding: 4rem;
   }
@@ -456,8 +512,8 @@ main footer .bottom .btm div {
   main #teamView #head {
     padding: 1rem 3rem;
   }
-  main #teamView #head div {
-    display: block;
+  main #teamView #head .findjobArrow {
+    display: flex;
   }
   main #teamView #teamCont {
     grid-template-columns: 1fr 1fr 1fr;

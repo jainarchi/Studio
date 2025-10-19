@@ -21,12 +21,41 @@ main {
   width: 100%;
   margin: 0 auto;
 
-  #arrowbtn {
-    border: 0.01rem solid rgba(94, 93, 93, 0.826);
-    background: #343434;
-    padding: 0.5rem;
-    border-radius: 50%;
-    margin-right: 0.5rem;
+  .findjobArrow {
+    @include m.flex-row(start);
+    gap: 0.7rem;
+
+    .circle {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0.1rem solid rgb(87, 86, 86);
+      background: rgba(32, 32, 32, 0.774);
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+
+      #a1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #a2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-200%, 100%);
+      }
+    }
+  }
+  .findjobArrow:hover #a1 {
+    transform: translate(100%, -200%);
+    transition: 0.2s ease-in-out;
+  }
+  .findjobArrow:hover #a2 {
+    transform: translate(-50%, -50%);
+    transition: 0.4s ease-in;
   }
 
   i {
@@ -39,12 +68,12 @@ main {
     background: rgba(95, 94, 94, 0.774);
     backdrop-filter: blur(0.4rem);
     margin: 0.3rem;
-    transition: transform 0.3s ease-in-out, border 0.3s;
+    transition: transform 0.3s ease-in, border 0.3s;
   }
 
   i:hover {
     border: 0.01rem solid rgba(181, 180, 180, 0.884);
-    scale: 1.1;
+    scale: 1.2;
   }
 
   img {
@@ -55,35 +84,53 @@ main {
 
   nav {
     @include m.flex-row(space-between);
-    padding: 1.2rem 1rem 0.2rem 2rem; 
+    padding: 1.2rem 1rem 0.2rem 2rem;
     text-transform: uppercase;
     font-family: monospace;
     font-size: 1rem;
-    
-    h3{
-      font-weight: 300;
-    }
 
-    #right{
-      @include m.flex-row();
-      gap: 0.7rem;
-
-       a {
-      text-decoration: none;
+    h2 {
+      font-weight: 200;
       color: rgb(210, 206, 206);
-      background: #1e1d1d;
-      border-radius: 0.5rem;
-      padding: 1rem 1.3rem;
-      margin-left: 0.7rem;
-      
     }
 
-    #lastbtn{
-        background:#cebd63;
+    #right {
+      @include m.flex-row();
+      gap: 0.2rem;
+
+      a {
+        text-decoration: none;
+        color: rgb(210, 206, 206);
+        background: #1d1c1c;
+        border-radius: 0.5rem;
+        padding: 1rem 1.3rem;
+        margin-left: 0.1rem;
+      }
+
+      #rig-first {
+        display: none;
+      }
+
+      #zero {
+        padding: 0.1rem 0.3rem;
+        border-radius: 50%;
+        background: #cebd63;
         color: #434343;
       }
+
+      #lastbtn{
+        background: #cebd63;
+        color: #434343;
+        display: none;
+      }
+      #lastbtn:hover {
+        background: #e3cb54;
+      }
+
+      #hamburger {
+        display: block;
+      }
     }
-   
   }
 
   section#view1 {
@@ -189,8 +236,7 @@ main {
         font-size: 1.8rem;
         font-weight: 400;
       }
-
-      div {
+      .findjobArrow {
         display: none;
       }
     }
@@ -404,6 +450,13 @@ main {
 
 @media (min-width: 767px) {
   main {
+    nav{
+      #right{
+        #lastbtn{
+          display: block;
+        }
+      }
+    }
     #teamView {
       #head {
         h1 {
@@ -488,6 +541,17 @@ main {
 
 @media (min-width: 990px) {
   main {
+    nav {
+      #right {
+        #rig-first {
+          display: block;
+        }
+        #hamburger {
+          display: none;
+        }
+      }
+    }
+
     section#view1 .bottom {
       padding: 4rem;
       .text h1 {
@@ -508,8 +572,8 @@ main {
       #head {
         padding: 1rem 3rem;
 
-        div {
-          display: block;
+        .findjobArrow {
+          display: flex;
         }
       }
 
